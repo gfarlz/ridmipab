@@ -48,18 +48,12 @@ git clone <url-repo>
 cd pa-ada-coffe
 ```
 
-3. Buat file `.env` di root project
-```
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-4. Install dependencies
+3. Install dependencies
 ```bash
 flutter pub get
 ```
 
-5. Jalankan aplikasi
+4. Jalankan aplikasi
 
 - jalankan langsung
 ```bash
@@ -76,7 +70,7 @@ flutter run -d chrome
 
 ## Struktur Project
 
-```` bash
+``` bash
 lib
 ├── core
 │   ├── app_constans.dart
@@ -130,84 +124,92 @@ lib
     ├── currency_formatter.dart
     └── dialog_helper.dart
 
-````
-
-## Fitur Aplikasi
+```
 
 ## Database
 Aplikasi menggunakan Supabase sebagai backend database yang menangani penyimpanan data, autentikasi, serta pengolahan data secara real-time.
 ### Tabel yang Digunakan
-#### `menu`
+#### 1.`menu`
 | Field      | Tipe Data          |
 | ---------- | ------------------ |
 | id         | uuid (Primary Key) |
 | name       | text               |
-| price      | int                |
+| price      | numeric            |
 | category   | text               |
-| stock      | int                |
+| stock      | int4               |
 | emoji      | text               |
-| created_at | timestamp          |
+| created_at | timestamptz        |
 
-#### `transaksi`
+#### 2.`transaksi`
 | Field       | Tipe Data          |
 | ----------- | ------------------ |
 | id          | uuid (Primary Key) |
 | gerobak_id  | uuid (Foreign Key) |
 | rider_id    | uuid (Foreign Key) |
-| total_harga | int                |
-| tanggal     | timestamp          |
+| total_harga | numeric            |
+| tanggal     | timestamptz        |
 | status      | text               |
 
-#### `detail_transaksi`
+#### 3.`detail_transaksi`
 | Field        | Tipe Data          |
 | ------------ | ------------------ |
 | id           | uuid (Primary Key) |
 | transaksi_id | uuid (Foreign Key) |
 | menu_id      | uuid (Foreign Key) |
-| qty          | int                |
-| harga        | int                |
+| qty          | int4               |
+| harga        | numeric            |
+| subtotal     | numeric            |
 
-#### `profiles`
+#### 4.`profiles`
 | Field | Tipe Data          |
 | ----- | ------------------ |
 | id    | uuid (Primary Key) |
-| email | text               |
+| name  | text               |
 | role  | text               |
+| email | text               |
+| created_at  | timestamptz  |
+| photo_url       | text     |
 
-#### `gerobak`
+#### 5.`gerobak`
 | Field        | Tipe Data          |
 | ------------ | ------------------ |
 | id           | uuid (Primary Key) |
 | nama_gerobak | text               |
 | lokasi       | text               |
 | rider_id     | uuid (Foreign Key) |
+| created_at   | timestamptz        |
 
 
-#### `stok_gerobak`
+
+#### 6.`stok_gerobak`
 | Field         | Tipe Data          |
 | ------------- | ------------------ |
 | id            | uuid (Primary Key) |
 | gerobak_id    | uuid (Foreign Key) |
 | menu_id       | uuid (Foreign Key) |
-| stok_awal     | int                |
-| stok_saat_ini | int                |
-| created_at    | timestamp          |
+| stok_awal     | int4               |
+| stok_saat_ini | int4               |
+| created_at    | timestamptz        |
 
 
-#### `stock_outlet`
+#### 7.`stock_outlet`
 | Field      | Tipe Data          |
 | ---------- | ------------------ |
 | id         | uuid (Primary Key) |
 | menu_id    | uuid (Foreign Key) |
-| stok       | int                |
-| created_at | timestamp          |
+| stok       | int4               |
+| created_at | timestamptz        |
+| gerobak_id | text               |
 
 
-#### `riders`
+#### 8.`riders`
 | Field      | Tipe Data          |
 | ---------- | ------------------ |
 | id         | uuid (Primary Key) |
 | profile_id | uuid (Foreign Key) |
+| nama_rider | text               |
+| no_hp      | text               |
+| created_at | timestamptz        |
 
 
 ## Widget yang Digunakan
