@@ -125,6 +125,45 @@ lib
     └── dialog_helper.dart
 
 ```
+## Fitur Aplikasi
+#### 1. Autentikasi Pengguna (Login & Register)
+Aplikasi menyediakan fitur login dan registrasi menggunakan Supabase Authentication. Data pengguna disimpan pada tabel profiles dan dilengkapi dengan role seperti owner dan rider untuk membedakan hak akses.
+
+#### 2. Menampilkan Data Menu (Read)
+Aplikasi menampilkan seluruh data menu kopi yang tersimpan di database Supabase dalam bentuk daftar (ListView), lengkap dengan informasi nama, harga, kategori, dan stok.
+
+#### 3. Menambahkan Data Menu (Create)
+Pengguna dapat menambahkan menu baru melalui halaman form input. Data yang dimasukkan akan langsung disimpan ke database Supabase.
+
+#### 4. Mengedit Data Menu (Update)
+Pengguna dapat memperbarui data menu yang sudah ada, seperti nama produk, harga, kategori, dan stok melalui halaman edit.
+
+#### 5. Menghapus Data Menu (Delete)
+Pengguna dapat menghapus data menu dari database melalui tombol delete pada setiap item menu.
+
+#### 6. Transaksi Penjualan
+Aplikasi menyediakan fitur untuk melakukan transaksi penjualan, di mana pengguna dapat memilih menu, menentukan jumlah, dan sistem akan menghitung total harga secara otomatis sebelum disimpan ke database.
+
+#### 7. Manajemen Stok
+Aplikasi mengelola stok barang pada setiap gerobak. Stok akan otomatis berkurang saat transaksi terjadi dan dapat ditambahkan kembali melalui fitur update stok.
+
+#### 8. Manajemen Gerobak
+Aplikasi menampilkan data gerobak (cabang penjualan) dan memungkinkan filtering berdasarkan role pengguna, sehingga rider hanya dapat mengakses gerobak yang menjadi tanggung jawabnya.
+
+#### 9. Laporan dan Analisis
+Aplikasi menyediakan fitur laporan seperti total pendapatan, jumlah transaksi, serta data produk terlaris. Selain itu, ditampilkan juga grafik tren penjualan untuk membantu analisis performa bisnis.
+
+#### 10. Navigasi Antar Halaman
+Aplikasi menggunakan sistem navigasi untuk berpindah antar halaman, seperti:
+- Halaman dashboard
+- Halaman menu
+- Halaman transaksi
+- Halaman stok
+- Halaman laporan
+
+
+
+
 
 ## Database
 Aplikasi menggunakan Supabase sebagai backend database yang menangani penyimpanan data, autentikasi, serta pengolahan data secara real-time.
