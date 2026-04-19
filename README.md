@@ -134,7 +134,81 @@ lib
 
 ## Fitur Aplikasi
 
-## Databse
+## Database
+Aplikasi menggunakan Supabase sebagai backend database yang menangani penyimpanan data, autentikasi, serta pengolahan data secara real-time.
+### Tabel yang Digunakan
+#### `menu`
+| Field      | Tipe Data          |
+| ---------- | ------------------ |
+| id         | uuid (Primary Key) |
+| name       | text               |
+| price      | int                |
+| category   | text               |
+| stock      | int                |
+| emoji      | text               |
+| created_at | timestamp          |
+
+#### `transaksi`
+| Field       | Tipe Data          |
+| ----------- | ------------------ |
+| id          | uuid (Primary Key) |
+| gerobak_id  | uuid (Foreign Key) |
+| rider_id    | uuid (Foreign Key) |
+| total_harga | int                |
+| tanggal     | timestamp          |
+| status      | text               |
+
+#### `detail_transaksi`
+| Field        | Tipe Data          |
+| ------------ | ------------------ |
+| id           | uuid (Primary Key) |
+| transaksi_id | uuid (Foreign Key) |
+| menu_id      | uuid (Foreign Key) |
+| qty          | int                |
+| harga        | int                |
+
+#### `profiles`
+| Field | Tipe Data          |
+| ----- | ------------------ |
+| id    | uuid (Primary Key) |
+| email | text               |
+| role  | text               |
+
+#### `gerobak`
+| Field        | Tipe Data          |
+| ------------ | ------------------ |
+| id           | uuid (Primary Key) |
+| nama_gerobak | text               |
+| lokasi       | text               |
+| rider_id     | uuid (Foreign Key) |
+
+
+#### `stok_gerobak`
+| Field         | Tipe Data          |
+| ------------- | ------------------ |
+| id            | uuid (Primary Key) |
+| gerobak_id    | uuid (Foreign Key) |
+| menu_id       | uuid (Foreign Key) |
+| stok_awal     | int                |
+| stok_saat_ini | int                |
+| created_at    | timestamp          |
+
+
+#### `stock_outlet`
+| Field      | Tipe Data          |
+| ---------- | ------------------ |
+| id         | uuid (Primary Key) |
+| menu_id    | uuid (Foreign Key) |
+| stok       | int                |
+| created_at | timestamp          |
+
+
+#### `riders`
+| Field      | Tipe Data          |
+| ---------- | ------------------ |
+| id         | uuid (Primary Key) |
+| profile_id | uuid (Foreign Key) |
+
 
 ## Widget yang Digunakan
 
