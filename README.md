@@ -245,6 +245,59 @@ ElevatedButton(
 
 
 ## Halaman Aplikasi
+### 1 Login Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/d99e58c0-5701-449e-8147-82b3a0f0f97d" />
+
+### 2 Register Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/0f8bda92-d072-4798-9035-f6031bde8b78" />
+
+### 3 TAMPILAN OWNER
+
+#### a. Home Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/06185ef8-fc5a-4140-8261-69acc2cb97a9" />
+
+#### b. Sales Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/c03e4562-c25d-433e-8b40-a481a2e23a59" />
+
+#### c. Stock Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/a5c5c626-238f-4e7f-af03-e526344c303c" />
+
+#### d. Reports Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/4c258eea-5c9f-45fc-81d3-bf85a7008028" />
+
+#### e. Profile Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/16068026-1934-4685-856b-b2bc01dbac03" />
+
+### 4. Tampilan Rider
+#### a. Home Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/527544d2-1aeb-432a-953d-e7011b388305" />
+
+#### b. Sales Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/f0050cd5-faa0-4015-85dc-bdb5cdf936e5" />
+
+#### c. Reports Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/3a79eb5f-6b71-4f37-b1e3-c63f465e0af7" />
+
+#### d. Profile Page
+<img width="250" height="415" alt="image" src="https://github.com/user-attachments/assets/a43af6f1-109c-4acc-9b85-def317f08a63" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Kesimpulan
 Aplikasi Ad A Coffee merupakan implementasi sistem informasi berbasis mobile yang dirancang untuk mendukung pengelolaan operasional coffee shop secara terintegrasi. Sistem ini menggabungkan berbagai fungsi utama seperti manajemen menu, transaksi penjualan, pengelolaan stok, serta penyajian laporan dalam satu platform yang terstruktur. Dengan memanfaatkan Flutter sebagai framework utama dan Supabase sebagai backend service, aplikasi ini mampu menghadirkan pengolahan data secara real-time dengan arsitektur yang modular dan terorganisir. Secara keseluruhan, aplikasi ini menunjukkan penerapan konsep pengembangan perangkat lunak yang sistematis, mulai dari pemisahan layer hingga integrasi layanan backend, sehingga mampu memenuhi kebutuhan dasar sistem informasi pada skala bisnis coffee shop.
